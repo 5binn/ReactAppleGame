@@ -1,42 +1,120 @@
-#root {
-  max-width: 1280px;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(34, 34, 34);
+  flex-direction: column;
+}
+
+.main-container {
+  max-width: 960px; /* 가운데 컨텐츠 최대 너비 */
+  width: 100%; /* 화면이 작아질 때 자동으로 줄어들도록 */
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  height: 600px;
+  border-radius: 30px;
+  background-color: #90ee90;
+  box-shadow: 5px 5px 10px rgba(253, 253, 253, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start-container {
+  display: flex;
+  flex-direction: column;
+  background-image: url("./assets/chim.png");
+  background-size: cover; /* 이미지 크기 조정 */
+  background-position: center; /* 가운데 정렬 */
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  border-radius: 5px;
+  width: 800px;
+  height: 500px;
+  box-shadow: -1px -1px 2px 0 #367536, 1px -1px 2px 0 #367536,
+    -1px 1px 2px 0 #367536, 1px 1px 2px 0 #367536;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.title-container {
+  font-family: "Single Day", serif;
+  font-weight: 900;
+  margin-left: 100px;
+  margin-top: 40px;
+  text-shadow: -2px -2px 0 lightgray, 2px -2px 0 lightgray, -2px 2px 0 gray,
+    2px 2px 0 gray;
 }
 
-.card {
-  padding: 2em;
+.start-title-apple {
+  font-size: 80px;
+  color: red;
 }
 
-.read-the-docs {
-  color: #888;
+.start-title-game {
+  margin-left: 10px;
+  font-size: 60px;
+  color: green;
+}
+
+.gamestart-container {
+  margin-left: 100px;
+}
+
+.start-btn {
+  margin-top: 30px;
+  width: 230px; /* 원하는 크기 */
+  height: 230px;
+  background-image: url("./assets/apple.png");
+  background-size: contain; /* 이미지 크기 조정 */
+  background-position: center; /* 가운데 정렬 */
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-btn:hover {
+  filter: brightness(1.2);
+}
+
+.start-btn-text {
+  margin-top: 70px;
+  font-family: "Single Day", serif;
+  font-size: 70px;
+  color: white;
+  text-shadow: -2px -2px 0 gray, 2px -2px 0 gray, -2px 2px 0 gray,
+    2px 2px 0 gray;
+}
+
+.btn-container {
+  width: 800px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.reset-btn {
+  padding: 4px 6px 4px 6px;
+  color: grey;
+  font-size: large;
+  font-weight: bold;
+  border: 2px solid grey;
+  border-radius: 3px;
+  background-color: #90ee90;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #aff6af;
 }
